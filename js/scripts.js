@@ -64,3 +64,33 @@ console.log("RESTO DA DIVISÃO ${num3 % 3}")
   console.log("TESTE RELACIONAIS", 10 > 5)
   console.log("TESTE RELACIONAIS", 10 < 5)
   console.log("TESTE RELACIONAIS")
+
+  //TESTE LÓGICO
+  let idade = 25
+
+  if(idade >= 18){
+    console.log("Maior de idade")
+  }else{
+    console.log("Menor de idade")
+  }
+
+  /**
+   * RENOVAÇÃO DE CNH
+    MENOR QUE 18 - NÃO PERMITIDO
+    18 ATÉ 49 - 10 ANOS
+    50 ATÉ 69 - 5 ANOS
+    70 ACIMA - 3 ANOS
+   */
+   
+//ALINHAMENTO DE IF
+if (idade < 18){
+    console.log('COM A IDADE DE $ {idade}, NÃO É PERMITIDO POSSUIR CNH')
+}    else if (idade < 50) {
+        console.log("COM A IDADE DE ${idade}, 10 ANOS PARA RENOVAR")
+}    else if (idade < 70) {
+        console.log("COM A IDADE DE ${idade}, 5 ANOS PARA RENOVAR")
+    }    else {
+        
+    }
+    
+
