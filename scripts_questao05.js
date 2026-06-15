@@ -8,25 +8,22 @@ formDados.addEventListener('submit', (evt) => {
 
     const objFormDados = new FormData(formDados)
 
-    let aluno = objFormDados.get('aluno')
-    let nota1 = parseFloat(objFormDados.get('nota1'))
-    let nota2 = parseFloat(objFormDados.get('nota2'))
-    let nota3 = parseFloat(objFormDados.get('nota3'))
+    let lado1 = parseFloat(objFormDados.get('lado1'))
+    let lado2 = parseFloat(objFormDados.get('lado2'))
+    let lado3 = parseFloat(objFormDados.get('lado3'))
 
-    let media = (nota1 + nota2 + nota3) / 3
+    let tipo = ""
 
-    let situacao = ""
-
-    if (media >= 6) {
-        situacao = "Aprovado"
+    if (lado1 == lado2 && lado2 == lado3) {
+        tipo = "Equilátero"
+    } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+        tipo = "Isósceles"
     } else {
-        situacao = "Reprovado"
+        tipo = "Escaleno"
     }
 
     divResultado.innerHTML = `
-        Aluno: ${aluno} <br>
-        Média: ${media.toFixed(2).replace('.', ',')} <br>
-        Situação: ${situacao}
+        Tipo do triângulo: ${tipo}
     `
 
     formDados.reset()
