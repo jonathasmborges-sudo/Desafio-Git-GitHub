@@ -18,4 +18,3 @@ formDados.addEventListener('submit', (evt) => {
     divResultado.innerHTML = `A quantidade de combustivel é de: ${quantidade.toFixed(2).replace('.', ',')}km, o valor a pagar é de: R$${(parseFloat(valor).toFixed(2)).replace('.', ',')}`
 
     formDados.reset()
-})
