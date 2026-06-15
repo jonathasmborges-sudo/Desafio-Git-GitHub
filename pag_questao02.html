@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
-<title>Questão 1</title>
+<meta name = "">
+<title>Questão 2</title>
 </head>
 <body>
 
-<h2>Média de 3 números</h2>
+<script src="js/scripts_questao02.js" defer></script>
+</head>
 
-<input type="number" id="n1" placeholder="Número 1">
-<input type="number" id="n2" placeholder="Número 2">
-<input type="number" id="n3" placeholder="Número 3">
+<body>
 
-<button onclick="calcularMedia()">Calcular</button>
+    <h1>2. Faça um algoritmo que leia a largura e altura de
+        uma parede, calcule e mostre a área a ser pintada e a
+        quantidade de tinta necessária para o serviço. Considere
+        que cada litro de tinta pinta uma área de 2 metros
+        quadrados.</h1>
 
-<p id="resultado"></p>
+    <div id="div-form">
 
-<script src="questao1.js"></script>
+        <h3>Quantidade de tinta</h3>
+
+        <form id="formulario">
+
+            <label for="largura">Largura</label>
+            <input type="text" name="largura" id="largura">
+
+            <label for="altura">Altura</label>
+            <input type="text" name="altura" id="altura">
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+
+        </form>
+
+        <div id="div-dados">
+
+        </div>
+
+    </div>
 
 </body>
 </html>
-
