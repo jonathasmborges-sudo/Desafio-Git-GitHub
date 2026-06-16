@@ -12,26 +12,22 @@ formDados.addEventListener('submit', (evt) => {
     let peso = parseFloat(objFormDados.get('peso'))
     let altura = parseFloat(objFormDados.get('altura'))
 
-    let imc = peso / (altura * altura)
+    let imc = (altura * altura) / peso
     let faixa = ""
 
     if (imc < 20) {
         faixa = "Abaixo do peso"
-    } else if (imc <= 25) {
+    } else if (imc >20 && imc <= 25) {
         faixa = "Normal"
-    } else if (imc <= 30) {
+    } else if (imc >25 && imc <= 30) {
         faixa = "Excesso de peso"
-    } else if (imc <= 35) {
+    } else if (imc >30 && imc <= 35) {
         faixa = "Obesidade"
     } else {
         faixa = "Obesidade mórbida"
     }
 
-    divResultado.innerHTML = `
-        Nome: ${nome} <br>
-        IMC: ${imc.toFixed(2)} <br>
-        Faixa de risco: ${faixa}
-    `
+    divResultado.innerHTML = ` Faixa de risco: ${faixa}`
 
     formDados.reset()
 })
