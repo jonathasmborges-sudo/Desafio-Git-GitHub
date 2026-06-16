@@ -14,7 +14,7 @@ formDados.addEventListener('submit', (evt) => {
 
     let media = (Num1 + Num2 + Num3) / 3
 
-    console.log (media);
+    console.log (media)
 
     divResultado.innerHTML = ` A média dos 3 números é: ${media.toFixed(2).replace('.', ',')}`
 
